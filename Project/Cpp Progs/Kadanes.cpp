@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int maxSubArraySum(int a[], int size)
+int maxSubArraySum(vector<int>&a, int size)
 {
 	int max_so_far = INT_MIN, max_ending_here = 0;
 
@@ -20,11 +20,11 @@ int main()
 {
 
 	int n ;
-cin>>n;
-  int a[n];
-  for(int i=0;i<n;i++){
-    cin>>a[i];
-  }
+	cin>>n;
+  	vector<int>a(n);
+  	for(int i=0;i<n;i++){
+    		cin>>a[i];
+  	}
 	int max_sum = maxSubArraySum(a, n);
 	cout << "Maximum contiguous sum is " << max_sum;
 	return 0;
